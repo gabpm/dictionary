@@ -1,0 +1,16 @@
+<h1>Dictionary</h1>
+
+<p>Words:</p>
+
+<ul>
+  <% @terms.each() do |term| %>
+  <li><a href="/words/<%= term.id() %>"><%= term.name() %></a></li>
+  <% end %>
+</ul>
+
+<form action="/words" method="post">
+  <label for="name">Contact's Name:</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Add Word</button>
+</form>
