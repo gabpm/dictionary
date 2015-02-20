@@ -26,4 +26,12 @@ describe(Word) do
       expect(Word.all()).to(eq([]))
     end
   end
+
+  describe("#id") do
+    it("returns a word's ID") do
+      test_word = Word.new({:name => "repository"})
+      test_word.save
+      expect(test_word.id()).to(eq(1))
+    end
+  end
 end
